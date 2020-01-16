@@ -4,3 +4,5 @@ EXMEX - Rebalanced
 ExpEngineers - Rebalanced & fixed
 Experimental Squareshields - fixed
 T2_T3_Storage_FAF - Rebalanced & fixed icon issue
+
+I've put the credit(s)/thanks to in the modinfo files.
