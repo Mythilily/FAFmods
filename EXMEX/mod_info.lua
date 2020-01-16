@@ -1,0 +1,16 @@
+name = "EXMEX Rebalanced"
+uid = "4c6694be-aaaa-aa12-8fe7-cg2c9e8e8889"
+version = 3.1
+copyright = "Puledro&Yaru"
+description = "Add the EXPERIMENTAL MASS EXTRACTOR. Now fixed for Seraphim (Rebalanced by Mythixgirl, credits to Puledro and Yaru)."
+author = "Mythixgirl"
+icon = "/mods/EXMEX/modicon.png"
+selectable = true
+enabled = true
+exclusive = false
+ui_only = false
+requires = {}
+requiresNames = {}
+conflicts = {}
+before = {}
+after = {}

@@ -1,0 +1,298 @@
+UnitBlueprint {
+    Air = {
+        AutoLandTime = 0,
+        BankFactor = 0.1,
+        BankForward = false,
+        CanFly = true,
+        CirclingDirChangeFrequencySec = 1,
+        CirclingElevationChangeRatio = 0.25,
+        CirclingRadiusChangeMaxRatio = 0.9,
+        CirclingRadiusChangeMinRatio = 0.6,
+        CirclingRadiusVsAirMult = 0.66,
+        CirclingTurnMult = 3,
+        KLift = 1,
+        KLiftDamping = 0.8,
+        KMove = 0.8,
+        KMoveDamping = 2,
+        KTurn = 0.8,
+        KTurnDamping = 1.5,
+        LiftFactor = 7,
+        MaxAirspeed = 18,
+        MinAirspeed = 3,
+        StartTurnDistance = 5,
+        Winged = false,
+    },
+    Audio = {
+        AirUnitWaterImpact = Sound {
+            Bank = 'Explosions',
+            Cue = 'Expl_Water_Lrg_01',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        AmbientMove = Sound {
+            Bank = 'URA',
+            Cue = 'URA0401_Move_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        CaptureLoop = Sound {
+            Bank = 'URL',
+            Cue = 'URL0309_Capture_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Construct = Sound {
+            Bank = 'URL',
+            Cue = 'URL0309_Construct_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        ConstructLoop = Sound {
+            Bank = 'URL',
+            Cue = 'URL0309_Construct_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Destroyed = Sound {
+            Bank = 'URADestroy',
+            Cue = 'URA_Destroy_Air',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Killed = Sound {
+            Bank = 'URADestroy',
+            Cue = 'URA_Destroy_Air_Killed',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Landing = Sound {
+            Bank = 'URA',
+            Cue = 'URA0401_Move_Land',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        ReclaimLoop = Sound {
+            Bank = 'URL',
+            Cue = 'URL0309_Reclaim_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        StartCapture = Sound {
+            Bank = 'URL',
+            Cue = 'URL0309_Capture_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        StartMove = Sound {
+            Bank = 'URA',
+            Cue = 'URA0401_Move_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        StartReclaim = Sound {
+            Bank = 'URL',
+            Cue = 'URL0309_Reclaim_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        StopMove = Sound {
+            Bank = 'URA',
+            Cue = 'URA0401_Move_Stop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Thruster = Sound {
+            Bank = 'URA',
+            Cue = 'URA0401_Move_Thruster',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        UISelection = Sound {
+            Bank = 'Interface',
+            Cue = 'Cybran_Select_Air',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+    },
+    AverageDensity = 1,
+    BuildIconSortPriority = 100,
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3COMMANDER',
+        'BUILTBYTIER3ENGINEER',
+        'CYBRAN',
+        'MOBILE',
+        'AIR',
+        'EXPERIMENTAL',
+        'CONSTRUCTION',
+        'ENGINEER',
+        'REPAIR',
+        'RECLAIM',
+        'CAPTURE',
+        'NEEDMOBILEBUILD',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'DRAGBUILD',
+        'SHOWQUEUE',
+        'CANNOTUSEAIRSTAGING',
+    },
+    CollisionOffsetY = 1.75,
+    Defense = {
+        AirThreatLevel = 0,
+        ArmorType = 'Heavy',
+        EconomyThreatLevel = 0,
+        Health = 2500,
+        MaxHealth = 2500,
+        RegenRate = 2,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC CEF0101_desc>Experimental Flying Engineer',
+    Display = {
+        Abilities = {
+            '<LOC ability_engineeringsuite>Engineering Suite',
+        },
+        IdleEffects = {
+            Air = {
+                Effects = {
+                    {
+                        Bones = {
+                            'URA0401',
+                        },
+                        Type = 'Hover03',
+                    },
+                },
+            },
+        },
+        LayerChangeEffects = {
+            AirLand = {
+                Effects = {
+                    {
+                        Bones = {
+                            'URA0401',
+                        },
+                        Type = 'Landing01',
+                    },
+                },
+            },
+            LandAir = {
+                Effects = {
+                    {
+                        Bones = {
+                            'URA0401',
+                        },
+                        Type = 'TakeOff01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 550,
+                    ShaderName = 'Insect',
+                },
+            },
+        },
+        MovementEffects = {
+            Air = {
+                Effects = {
+                    {
+                        Bones = {
+                            'URA0401',
+                        },
+                        Type = 'Hover03',
+                    },
+                },
+            },
+        },
+        PlaceholderMeshName = 'UXA0009',
+        SpawnRandomRotation = true,
+        UniformScale = 0.15,
+    },
+    Economy = {
+        BuildCostEnergy = 2000000,
+        BuildCostMass = 125000,
+        BuildRate = 2000,
+        BuildTime = 12000,
+        BuildableCategory = {
+            'BUILTBYTIER3ENGINEER CYBRAN',
+        },
+        ProductionPerSecondEnergy = 1000,
+        ProductionPerSecondMass = 50,
+        StorageEnergy = 4000,
+        StorageMass = 400,
+    },
+    Footprint = {
+        MaxSlope = 0.25,
+        SizeX = 4,
+        SizeZ = 5,
+    },
+    General = {
+        Category = 'Engineer',
+        Classification = 'RULEUC_MilitaryAircraft',
+        CommandCaps = {
+            RULEUCC_Attack = false,
+            RULEUCC_CallTransport = false,
+            RULEUCC_Capture = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Nuke = false,
+            RULEUCC_Patrol = true,
+            RULEUCC_Reclaim = true,
+            RULEUCC_Repair = true,
+            RULEUCC_RetaliateToggle = false,
+            RULEUCC_Stop = true,
+            RULEUCC_Transport = false,
+        },
+        ConstructionBar = true,
+        FactionName = 'Cybran',
+        Icon = 'air',
+        TechLevel = 'RULEUTL_Secret',
+        UnitName = '<LOC CEF0101_name>Black Widow',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 60,
+    },
+    Interface = {
+        HelpText = '<LOC CEF0101_help>Aerial Engineer',
+    },
+    LifeBarHeight = 0.075,
+    LifeBarOffset = 3.25,
+    LifeBarSize = 6.5,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Air = true,
+            LAYER_Land = true,
+            LAYER_Orbit = false,
+            LAYER_Seabed = false,
+            LAYER_Sub = false,
+            LAYER_Water = true,
+        },
+        Elevation = 12,
+
+        # FuelRechargeRate = 150,
+        # FuelUseTime = 5000,
+        MaxSpeed = 20,
+        MotionType = 'RULEUMT_Air',
+        SkirtOffsetX = -1.5,
+        SkirtOffsetZ = -1.5,
+        SkirtSizeX = 8,
+        SkirtSizeZ = 8,
+    },
+    SelectionSizeX = 3,
+    SelectionSizeZ = 3.5,
+    SelectionThickness = 0.23,
+    SizeX = 1,
+    SizeY = 0.3,
+    SizeZ = 3,
+    StrategicIconName = 'icon_experimental_generic',
+    StrategicIconSortPriority = 65,
+    Transport = {
+        AirClass = true,
+        ClassGenericUpTo = 2,
+        TransportClass = 10,
+    },
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Air = false,
+            Land = true,
+            Seabed = false,
+            Sub = false,
+            Water = false,
+        },
+    },
+}
